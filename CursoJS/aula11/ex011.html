@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+</head>
+<body>
+    <h1>Sistema de Reconhecimento</h1>
+    Digite seu país: <input type="text" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="res">
+    
+    <script>
+        function nacionalidade(){
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var txt = txtv.value
+            res.innerHTML = `<p>Seu país é: <strong>${txt}</strong></p>`
+            if(txt == 'Brasil' || txt == 'brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong>!</p>`
+            }else{
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>!</p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
